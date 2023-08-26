@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "d84136d0-b385-4d1d-b079-ecf7caeee02f",
+		"name": "example-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29051569"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "/item Get all items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkzMDYyOTI5LCJqdGkiOiJlZTk1NTdmNS00MmI2LTRkZWYtODg5NC00NzYyNzBmMDE2NWQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTMwNjI5MjksImV4cCI6MTY5MzA2MzgyOX0.RqRdurdW0vzNmdUV3uEicU4-VOFkQE8T105MO-7ERNg",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/item"
+					},
+					"response": []
+				},
+				{
+					"name": "/item Post new item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkzMDYyOTI5LCJqdGkiOiJlZTk1NTdmNS00MmI2LTRkZWYtODg5NC00NzYyNzBmMDE2NWQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTMwNjI5MjksImV4cCI6MTY5MzA2MzgyOX0.RqRdurdW0vzNmdUV3uEicU4-VOFkQE8T105MO-7ERNg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Notebook\",\r\n    \"price\": 99.50,\r\n    \"store_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/item"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/item_id Get specific item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkzMDYyOTI5LCJqdGkiOiJlZTk1NTdmNS00MmI2LTRkZWYtODg5NC00NzYyNzBmMDE2NWQiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTMwNjI5MjksImV4cCI6MTY5MzA2MzgyOX0.RqRdurdW0vzNmdUV3uEicU4-VOFkQE8T105MO-7ERNg",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/item/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/item_id Delete specific item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkzMDYzMTQxLCJqdGkiOiJhMmI2NGE5My03YTBkLTQ1YjItOGQ0Mi04ODRiOTY5MTk4MjMiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTMwNjMxNDEsImV4cCI6MTY5MzA2NDA0MSwiaXNfYWRtaW4iOnRydWV9.gd-X4BDhSpBy8W87ixXufaeJXOjKWJ5VjBP64EgnGhQ",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/item/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<item_id> Update an item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Laptop Updated\",\r\n    \"price\": 24.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/item/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "/store Get all stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/store"
+					},
+					"response": []
+				},
+				{
+					"name": "/store Post new store data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"My Store\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/store"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<store_id> Get specific store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/store/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<store_id> delete an store",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/store/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/sore/<store_id> Update a store",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"My Store Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/store/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/register Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Hideki\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/register"
+					},
+					"response": []
+				},
+				{
+					"name": "/login get access token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Hideki\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "/refresh Refresh access token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MzA2MjQyNCwianRpIjoiMTc1Zjc4MjUtM2NmYS00YTNmLWE2YzAtODFkZjUzYWIxYzAzIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjEsIm5iZiI6MTY5MzA2MjQyNCwiZXhwIjoxNjk1NjU0NDI0fQ.MWYWYLcqFjVSfQLMcC9w7pIDw6qAKmzDN6cRsdareko",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "/logout add token to blocklist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjkzMDYxNzkwLCJqdGkiOiJkYWU4MmY0OS1iMjUyLTQ2ZmMtYTEyOS05MmExY2QxNDc4OGYiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoxLCJuYmYiOjE2OTMwNjE3OTAsImV4cCI6MTY5MzA2MjY5MH0.9Wd63cjTcyLY2wRdr-vhI2tWVcg50MEaUC2ZdCPpEVE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/user_id get user data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/user_id delete user id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/user/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "/store/store_id/tag get all tags from store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/store/1/tag"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/store_id/tag Adiciona uma tag a store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Store Tag\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/store/1/tag"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/item_id/tag/tag_id link store tag to item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/item/2/tag/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/item_id/tag/tag_id remove store tag from item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/item/2/tag/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/tag_id get specific tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/tag/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/tag_id delete specific tag",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/tag/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
